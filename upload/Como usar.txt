@@ -1,0 +1,9 @@
+Como utilizar:
+1-Baixar um aplicativo chamado XAMPP, e abrir o aplicativo.
+2-Apenas colocar o arquivo descompactado nesse diretorio \xampp\htdocs
+3-Startar o APACHE e MYSQL dentro do arquivo XAMPP.
+4-Criar um banco de dados chamado (sistema)
+5-Selecionar esse banco de dados e ir em "Importar",e escolher o arquivo chamado "sistema.sql".
+6-Abrir este link, http://localhost/site/
+7-Login: rafa , senha:123
+8-Só conhecer.
