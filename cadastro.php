@@ -189,7 +189,7 @@ include("config.php");
                                 while ($row = $result->fetch_assoc()) {
                                     echo "<tr>
                                         <td>{$row['Nome']}</td>
-                                        <td>{$row['Quantidade']}</td>
+                                        <td>{$row['Quantidade']}{$row['UnidadeMedida']}a</td>
                                         <td>{$row['Marca']}</td>
                                         <td>{$row['Validade']}</td>
                                         <td><img src='{$row['imagem_path']}' alt='{$row['Nome']}'></td>

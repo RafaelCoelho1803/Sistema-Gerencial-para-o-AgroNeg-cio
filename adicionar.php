@@ -107,10 +107,10 @@ include("config.php");
                         <select id="produto" name="produto" class="form-control" required onchange="atualizarProduto()">
                             <option value="">Selecione um produto</option>
                             <?php
-                            $sql = "SELECT id_produto, Nome FROM produto ORDER BY Nome";
+                            $sql = "SELECT id_produto, Nome, Marca FROM produto ORDER BY Nome";
                             $result = $conn->query($sql);
                             while ($row = $result->fetch_assoc()) {
-                                echo "<option value='{$row['id_produto']}'>{$row['Nome']}</option>";
+                                echo "<option value='{$row['id_produto']}'>{$row['Nome']} - {$row['Marca']}</option>";
                             }
                             ?>
                         </select>
@@ -120,9 +120,9 @@ include("config.php");
                         <input type="number" class="form-control" id="quantidade" name="quantidade" required>
                     </div>
                     <div class="form-group">
-                        <label for="produto-imagem">Imagem do Produto</label>
+                        <label for="produto-imagem"></label>
                         <div id="produto-imagem">
-                            <img id="produto-imagem-src" src="" alt="Imagem do Produto" style="max-width: 100%; height: auto;">
+                            
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Adicionar</button>
@@ -169,10 +169,10 @@ include("config.php");
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>
                                     <td>{$row['Nome']}</td>
-                                    <td>{$row['Quantidade']}</td>
+                                    <td>{$row['Quantidade']} {$row['UnidadeMedida']}</td>
                                     <td>{$row['Marca']}</td>
                                     <td>{$row['Validade']}</td>
-                                    <td><img src='{$row['imagem_path']}' alt='{$row['Nome']}'></td>
+                                    <td><img src='{$row['imagem_path']}' alt='{$row['Nome']}' style='width: 100px; height: auto;'></td>
                                 </tr>";
                             }
 

@@ -122,7 +122,7 @@
 
         <script>
             function redirectToCadastro() {
-            window.location.href = 'upload/cadastro.php';
+            window.location.href = 'cadastro.php';
             }
         </script>
  
